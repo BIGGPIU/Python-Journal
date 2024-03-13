@@ -3,7 +3,8 @@
 This just allows you to write entries into txt files through python. This automates things such as making the name of the text file the date and inputting the time the entry was written.
 
 
-![demo](https://github.com/BIGGPIU/Python-Journal/assets/114438660/69315524-becd-4b1a-bf02-61d90be8e6d1)
+[demo.webm](https://github.com/BIGGPIU/Python-Journal/assets/114438660/a8f0aae4-18ab-4334-a539-0df191678e55)
+
 
 
 
