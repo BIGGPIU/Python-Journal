@@ -16,12 +16,120 @@ extension = ".txt"
 print (currentday2),
 
 def encrypt(string):
+    string = string.replace(".","#")
+    string = string.replace(",","^")
+    string = string.replace("a",",.....|") #there are 6 dots in this line 
+    string = string.replace("b",".,....|")
+    string = string.replace("c","..,...|")
+    string = string.replace("d","...,..|")
+    string = string.replace("e","....,.|")
+    string = string.replace("f",".....,|")
+    string = string.replace("g",",,....|")
+    string = string.replace("h",",.,...|")
+    string = string.replace("i",",..,..|")
+    string = string.replace("j",",...,.|")
+    string = string.replace("k",",....,|")
+    string = string.replace("l",",,,...|")
+    string = string.replace("m",",,.,..|")
+    string = string.replace("n",",,..,.|")
+    string = string.replace("o",",,...,|")
+    string = string.replace("p",",,,,..|")
+    string = string.replace("q",",,,.,.|")
+    string = string.replace("r",",,,..,|")
+    string = string.replace("s",",,,,,.|")
+    string = string.replace("t",",,,,.,|")
+    string = string.replace("u",",,,,,,|")
+    string = string.replace("v","....,,|")
+    string = string.replace("w","...,.,|")
+    string = string.replace("x","..,..,|")
+    string = string.replace("y",".,...,|")
+    string = string.replace("z","...,,,|")
+    string = string.replace(" ","_")
+    string = string.replace("A",",*****|") 
+    string = string.replace("B","*,****|")
+    string = string.replace("C","**,***|")
+    string = string.replace("D","***,**|")
+    string = string.replace("E","****,*|")
+    string = string.replace("F","*****,|")
+    string = string.replace("G",",,****|")
+    string = string.replace("H",",*,***|")
+    string = string.replace("I",",**,**|")
+    string = string.replace("J",",***,*|")
+    string = string.replace("K",",****,|")
+    string = string.replace("L",",,,***|")
+    string = string.replace("M",",,*,**|")
+    string = string.replace("N",",,**,*|")
+    string = string.replace("O",",,***,|")
+    string = string.replace("P",",,,,**|")
+    string = string.replace("Q",",,,*,*|")
+    string = string.replace("R",",,,**,|")
+    string = string.replace("S",",,,,,*|")
+    string = string.replace("T",",,,,*,|")
+    string = string.replace("U",",,,,,,|")
+    string = string.replace("V","****,,|")
+    string = string.replace("W","***,*,|")
+    string = string.replace("X","**,**,|")
+    string = string.replace("Y","*,***,|")
+    string = string.replace("Z","***,,,|")
+    return string
 
-    return
-
-def unecnrypt(string):
-
-    return
+def decrypt(string):
+    string = string.replace("#",".")
+    string = string.replace("^",",")
+    string = string.replace(",.....|","a") #there are 6 dots in this line 
+    string = string.replace(".,....|","b")
+    string = string.replace("..,...|","c")
+    string = string.replace("...,..|","d")
+    string = string.replace("....,.|","e")
+    string = string.replace(".....,|","f")
+    string = string.replace(",,....|","g")
+    string = string.replace(",.,...|","h")
+    string = string.replace(",..,..|","i")
+    string = string.replace(",...,.|","j")
+    string = string.replace(",....,|","k")
+    string = string.replace(",,,...|","l")
+    string = string.replace(",,.,..|","m")
+    string = string.replace(",,..,.|","n")
+    string = string.replace(",,...,|","o")
+    string = string.replace(",,,,..|","p")
+    string = string.replace(",,,.,.|","q")
+    string = string.replace(",,,..,|","r")
+    string = string.replace(",,,,,.|","s")
+    string = string.replace(",,,,.,|","t")
+    string = string.replace(",,,,,,|","u")
+    string = string.replace("....,,|","v")
+    string = string.replace("...,.,|","w")
+    string = string.replace("..,..,|","x")
+    string = string.replace(".,...,|","y")
+    string = string.replace("...,,,|","z")
+    string = string.replace(",*****|","A") 
+    string = string.replace("*,****|","B")
+    string = string.replace("**,***|","C")
+    string = string.replace("***,**|","D")
+    string = string.replace("****,*|","E")
+    string = string.replace("*****,|","F")
+    string = string.replace(",,****|","G")
+    string = string.replace(",*,***|","H")
+    string = string.replace(",**,**|","I")
+    string = string.replace(",***,*|","J")
+    string = string.replace(",****,|","K")
+    string = string.replace(",,,***|","L")
+    string = string.replace(",,*,**|","M")
+    string = string.replace(",,**,*|","N")
+    string = string.replace(",,***,|","O")
+    string = string.replace(",,,,**|","P")
+    string = string.replace(",,,*,*|","Q")
+    string = string.replace(",,,**,|","R")
+    string = string.replace(",,,,,*|","S")
+    string = string.replace(",,,,*,|","T")
+    string = string.replace(",,,,,,|","U")
+    string = string.replace("****,,|","V")
+    string = string.replace("***,*,|","W")
+    string = string.replace("**,**,|","X")
+    string = string.replace("*,***,|","Y")
+    string = string.replace("***,,,|","Z")
+    string = string.replace("_"," ")
+    return string
 def startpro():
     print ("What do you want to do?")
     print ("Type 'help' for assistance")
@@ -53,8 +161,9 @@ def startpro():
         if gotowhat == ("2"):
             createnewpassword()
 
-    if hold == ("devdelete"):
-       devdelete()
+    #if hold == ("devdelete"):
+    #   devdelete()
+    
 
 def devdelete():
      print ("Deleting password")
@@ -80,15 +189,17 @@ def createnewpassword():
                     2. create new password""")
     hold = input(">>>")
     if hold == ("2"):
-        askpass = input("what would you like your new password to be?")
-        f.write(askpass)
+        askpass = input("what would you like your new password to be? ")
+        encode = encrypt(askpass)
+        f.write(encode)
     if hold == ("1"):  
         print ("deleting password file.")
         os.remove("password.txt")
         return
 def askpassword():
     f = open("password.txt","r")
-    pastpass = f.read()
+    readfile = f.read()
+    pastpass = decrypt(readfile)
     hold = input ("Please input your password ")
     if pastpass == hold:
         f.close
@@ -116,7 +227,8 @@ def needhelp():
 def midway():
     hold2 = input ("Whats on your mind? >>>")
     f = open(f"{currentday2}.txt","w")
-    f.write (f"{hold2} - {currentday1.strftime('%I:%M:%S %p')}")
+    hold3 = encrypt(hold2)
+    f.write (f"{hold3} - {currentday1.strftime('%I:%M:%S %p')}")
     f.close 
     
 def history():
@@ -137,7 +249,9 @@ def history():
     if reading in lucky:
         randomtextfile = (textfile[imfeelinglucky])
         f = open(randomtextfile, "r")
-        print (f.read())
+        rawtext = (f.read())
+        hold = decrypt(rawtext)
+        print (hold)
         bomb = bomb+1
         return
     if reading not in lucky:
@@ -145,7 +259,10 @@ def history():
             readingint = int(reading)
             holdtextfile = (textfile[readingint-1])
             f = open(holdtextfile, "r")
-            print (f.read())
+            rawtext = (f.read())
+            hold = decrypt(rawtext)
+            print (hold)
+            startpro()
             return
         except: 
             return
