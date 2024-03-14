@@ -225,7 +225,7 @@ def needhelp():
     startpro()
 
 def midway():
-    hold2 = input ("Whats on your mind? >>>")
+    hold2 = input ("Whats on your mind? >>> ")
     f = open(f"{currentday2}.txt","w")
     hold3 = encrypt(hold2)
     f.write (f"{hold3} - {currentday1.strftime('%I:%M:%S %p')}")
