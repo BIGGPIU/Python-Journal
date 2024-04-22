@@ -279,7 +279,8 @@ def deletefun():
             break
     reading = input("Which entry do you want to delete? ")
     readingint = int(reading)
-    areyousure = input("Are you sure Y/N  ")
+    entryinquestion = textfile[readingint-1]
+    areyousure = input(f"Would you like to delete entry {entryinquestion} Y/N ")
     if areyousure in sure:
         os.remove (textfile[readingint-1])
         print ("File deleted.")
